@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		78FFEEDE2C8458AE00033DFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FFEEDD2C8458AE00033DFF /* AppDelegate.swift */; };
 		78FFEEE02C8458AE00033DFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FFEEDF2C8458AE00033DFF /* SceneDelegate.swift */; };
-		78FFEEE22C8458AE00033DFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FFEEE12C8458AE00033DFF /* ViewController.swift */; };
 		78FFEEE52C8458AE00033DFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78FFEEE32C8458AE00033DFF /* Main.storyboard */; };
 		78FFEEE72C8458AF00033DFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78FFEEE62C8458AF00033DFF /* Assets.xcassets */; };
 		78FFEEEA2C8458AF00033DFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78FFEEE82C8458AF00033DFF /* LaunchScreen.storyboard */; };
+		78FFEEF22C8459DF00033DFF /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FFEEF12C8459DF00033DFF /* PhotosCollectionViewController.swift */; };
+		78FFEEF42C8463AC00033DFF /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FFEEF32C8463AC00033DFF /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		78FFEEDA2C8458AE00033DFF /* PhotoTapps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoTapps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78FFEEDD2C8458AE00033DFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78FFEEDF2C8458AE00033DFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		78FFEEE12C8458AE00033DFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		78FFEEE42C8458AE00033DFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78FFEEE62C8458AF00033DFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78FFEEE92C8458AF00033DFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78FFEEEB2C8458AF00033DFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78FFEEF12C8459DF00033DFF /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		78FFEEF32C8463AC00033DFF /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				78FFEEDD2C8458AE00033DFF /* AppDelegate.swift */,
 				78FFEEDF2C8458AE00033DFF /* SceneDelegate.swift */,
-				78FFEEE12C8458AE00033DFF /* ViewController.swift */,
+				78FFEEF12C8459DF00033DFF /* PhotosCollectionViewController.swift */,
+				78FFEEF32C8463AC00033DFF /* PhotoCell.swift */,
 				78FFEEE32C8458AE00033DFF /* Main.storyboard */,
 				78FFEEE62C8458AF00033DFF /* Assets.xcassets */,
 				78FFEEE82C8458AF00033DFF /* LaunchScreen.storyboard */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78FFEEE22C8458AE00033DFF /* ViewController.swift in Sources */,
+				78FFEEF42C8463AC00033DFF /* PhotoCell.swift in Sources */,
 				78FFEEDE2C8458AE00033DFF /* AppDelegate.swift in Sources */,
 				78FFEEE02C8458AE00033DFF /* SceneDelegate.swift in Sources */,
+				78FFEEF22C8459DF00033DFF /* PhotosCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,8 +301,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +310,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoTapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -324,8 +331,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,9 +340,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoTapps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
