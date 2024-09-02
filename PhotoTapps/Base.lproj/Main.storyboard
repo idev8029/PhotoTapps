@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LKv-lo-Ohj">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LKv-lo-Ohj">
                             <size key="itemSize" width="100" height="100"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -24,25 +25,26 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="Ke4-hG-EIL" customClass="PhotoCell" customModule="PhotoTapps" customModuleProvider="target">
-                                <rect key="frame" x="-123.66666666666667" y="0.0" width="640" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WyR-AJ-PF0">
-                                    <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog1" translatesAutoresizingMaskIntoConstraints="NO" id="3vv-5Y-zo7">
-                                            <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dog1" translatesAutoresizingMaskIntoConstraints="NO" id="3vv-5Y-zo7">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="3vv-5Y-zo7" firstAttribute="leading" secondItem="WyR-AJ-PF0" secondAttribute="leading" id="0Sa-7f-Zf9"/>
-                                        <constraint firstAttribute="trailing" secondItem="3vv-5Y-zo7" secondAttribute="trailing" constant="-2.8421709430404007e-14" id="hlQ-jq-wWg"/>
-                                        <constraint firstItem="3vv-5Y-zo7" firstAttribute="top" secondItem="WyR-AJ-PF0" secondAttribute="top" id="jC8-NT-2s0"/>
-                                        <constraint firstAttribute="bottom" secondItem="3vv-5Y-zo7" secondAttribute="bottom" id="tXx-Yj-lpK"/>
+                                        <constraint firstAttribute="trailing" secondItem="3vv-5Y-zo7" secondAttribute="trailing" id="biD-2f-vU1"/>
+                                        <constraint firstItem="3vv-5Y-zo7" firstAttribute="top" secondItem="WyR-AJ-PF0" secondAttribute="top" id="nkh-rk-UwE"/>
+                                        <constraint firstItem="3vv-5Y-zo7" firstAttribute="leading" secondItem="WyR-AJ-PF0" secondAttribute="leading" id="sHz-AC-ix8"/>
+                                        <constraint firstAttribute="bottom" secondItem="3vv-5Y-zo7" secondAttribute="bottom" id="y5N-VX-sbG"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="dogImageView" destination="3vv-5Y-zo7" id="BrV-7a-EAh"/>
+                                    <segue destination="F3k-dr-NiO" kind="presentation" identifier="pickPhotoSegue" id="0wy-Tg-3HI"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -75,9 +77,57 @@
             </objects>
             <point key="canvasLocation" x="-274.04580152671753" y="-32.394366197183103"/>
         </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="V9V-K8-ZWo">
+            <objects>
+                <viewController id="F3k-dr-NiO" customClass="PhotoViewController" customModule="PhotoTapps" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="edg-Tk-7Gi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O7H-t1-8ei">
+                                <rect key="frame" x="0.0" y="278.66666666666669" width="393" height="285.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="285" id="yaw-hW-XKE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY1-N0-jfW">
+                                <rect key="frame" x="122" y="771" width="149" height="35"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system" title=" Tap to Share">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="shareAction:" destination="F3k-dr-NiO" eventType="touchUpInside" id="o29-vd-JSb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ILa-a4-1xz"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="O7H-t1-8ei" firstAttribute="centerY" secondItem="edg-Tk-7Gi" secondAttribute="centerY" id="cwe-20-BKL"/>
+                            <constraint firstItem="ILa-a4-1xz" firstAttribute="bottom" secondItem="cY1-N0-jfW" secondAttribute="bottom" constant="36" id="gDG-gY-Ltc"/>
+                            <constraint firstItem="cY1-N0-jfW" firstAttribute="centerX" secondItem="edg-Tk-7Gi" secondAttribute="centerX" id="kke-Lc-UQ7"/>
+                            <constraint firstItem="O7H-t1-8ei" firstAttribute="leading" secondItem="ILa-a4-1xz" secondAttribute="leading" id="r9b-Y1-uSR"/>
+                            <constraint firstItem="ILa-a4-1xz" firstAttribute="trailing" secondItem="O7H-t1-8ei" secondAttribute="trailing" id="rjc-M2-bAx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="O7H-t1-8ei" id="mS9-KU-zeg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OGU-8N-I5U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1521.3740458015266" y="-32.394366197183103"/>
+        </scene>
     </scenes>
     <resources>
         <image name="dog1" width="640" height="480"/>
+        <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
